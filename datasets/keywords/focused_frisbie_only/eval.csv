@@ -1,0 +1,3 @@
+audio_path,text,target_words
+datasets/keywords/prepared/audio/record5.wav,"Several frisbies were thrown back and forth by the students. Those early frisbies were not like modern toys, but the students still enjoyed them.",frisbies
+datasets/keywords/prepared/audio/record9.wav,"A frisbie flew through the air while other frisbies lay on the ground. The children watched the frisbie spin, and later they picked up the other frisbies.","frisbie,frisbies"

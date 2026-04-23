@@ -1,0 +1,13 @@
+{
+  "focus_words": [
+    "frisbie",
+    "frisbies"
+  ],
+  "excluded": [
+    "franscioni",
+    "fresbies"
+  ],
+  "total_rows_kept": 6,
+  "train_rows": 4,
+  "eval_rows": 2
+}

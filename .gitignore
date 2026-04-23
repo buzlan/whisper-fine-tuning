@@ -1,0 +1,25 @@
+.DS_Store
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.venv/
+venv/
+
+outputs/
+datasets/_cache/
+datasets/*/prepared/
+
+# Hugging Face / Transformers cache (often ends up in project)
+.cache/
+hf_cache/
+
+*.pt
+*.ckpt
+*.safetensors
+
+*.wav
+*.mp3
+*.flac
+*.m4a

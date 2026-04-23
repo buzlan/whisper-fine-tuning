@@ -92,7 +92,7 @@ python scripts/train_whisper_small_lora.py \
 Выход:
 - в `outputs/whisper-small-lora/` будет сохранена модель и процессор (токенайзер/фичи).
 
-## 5b) Полный fine-tune (без LoRA)
+## 7) Полный fine-tune (без LoRA)
 
 Полный fine-tune обычно требует **больше памяти** и **меньший learning rate**. Пример:
 
@@ -108,7 +108,7 @@ python scripts/train_whisper_small_full.py \
   --gradient_checkpointing
 ```
 
-## 7) Что тебе осталось сделать (чеклист)
+## 8) Что тебе осталось сделать (чеклист)
 
 - собрать `datasets/<name>/raw/*.wav + *.txt`
 - прогнать `scripts/prepare_local_dataset.py`

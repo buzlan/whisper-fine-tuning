@@ -7,14 +7,14 @@
 
 Ниже — пошагово.
 
-## 0) Что здесь уже есть
+## 1) Что здесь уже есть
 
 - `scripts/download_whisper_model.py`: скачивание/прогрев кэша модели.
 - `scripts/prepare_local_dataset.py`: сбор локального датасета в `train.csv/eval.csv`.
 - `scripts/train_whisper_small_lora.py`: обучение `openai/whisper-small` на своих данных.
 - `scripts/train_whisper_small_full.py`: полный fine-tune `openai/whisper-small` (обновляются все веса, требует больше VRAM).
 
-## 1) Установить зависимости
+## 2) Установить зависимости
 
 Рекомендуется отдельное окружение (можно использовать уже существующее, если оно ок).
 
@@ -25,13 +25,13 @@ pip install -U pip
 pip install -r requirements-train.txt
 ```
 
-## 2) Скачать small-модель (один раз)
+## 3) Скачать small-модель (один раз)
 
 ```bash
 python scripts/download_whisper_model.py --model openai/whisper-small
 ```
 
-## 3) Подготовить датасет (только ты заполняешь)
+## 4) Подготовить датасет (только ты заполняешь)
 
 Самый простой формат входа:
 
@@ -49,7 +49,7 @@ datasets/my_asr/raw/
 - `.txt` рядом — **точная расшифровка** (без таймкодов).
 - язык/орфография — как ты хочешь, чтобы модель писала после обучения.
 
-## 4) Сделать манифесты train/eval
+## 5) Сделать манифесты train/eval
 
 Скрипт пройдётся по папке, возьмёт пары `audio + .txt` и создаст:
 - `train.csv`, `eval.csv`
@@ -67,7 +67,7 @@ python scripts/prepare_local_dataset.py \
 - `text`: транскрипт
 - `uid`: идентификатор
 
-## 5) Запустить fine-tuning (Whisper small + LoRA)
+## 6) Запустить fine-tuning (Whisper small + LoRA)
 
 Минимальная команда:
 
@@ -108,7 +108,7 @@ python scripts/train_whisper_small_full.py \
   --gradient_checkpointing
 ```
 
-## 6) Что тебе осталось сделать (чеклист)
+## 7) Что тебе осталось сделать (чеклист)
 
 - собрать `datasets/<name>/raw/*.wav + *.txt`
 - прогнать `scripts/prepare_local_dataset.py`

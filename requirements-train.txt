@@ -1,0 +1,13 @@
+torch
+torchaudio
+transformers
+datasets
+accelerate
+evaluate
+jiwer
+soundfile
+librosa
+audioread
+
+# LoRA / PEFT (recommended for "small" fine-tune on limited VRAM)
+peft

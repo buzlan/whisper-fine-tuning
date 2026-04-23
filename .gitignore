@@ -19,7 +19,7 @@ hf_cache/
 *.ckpt
 *.safetensors
 
-*.wav
+
 *.mp3
 *.flac
 *.m4a

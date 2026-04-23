@@ -114,4 +114,3 @@ python scripts/train_whisper_small_full.py \
 - прогнать `scripts/prepare_local_dataset.py`
 - запустить `scripts/train_whisper_small_lora.py`
 
-Если хочешь — могу дальше помочь: подсказать оптимальные гиперпараметры под твой объём данных/железо и сделать нормальный eval (WER по доменам, sanity-check на ручных примерах).
